@@ -1,10 +1,10 @@
-import PageLink from "./PageLink";
+import SectionLink from "./SectionLink";
 
 function Contact() {
   return (
     <div id="contact" className="h-96 scroll-mt-32">
       <div>
-        <PageLink title="contact" />
+        <SectionLink title="contact" even={true} />
       </div>
     </div>
   );

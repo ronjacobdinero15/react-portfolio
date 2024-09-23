@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+
+import { HiOutlineRocketLaunch } from "react-icons/hi2";
+
 import Link from "./Link";
 
 function NavList() {
@@ -26,9 +29,22 @@ function NavList() {
   }
 
   return (
-    <nav ref={navRef} className="relative">
+    <nav
+      ref={navRef}
+      className="relative flex items-center gap-x-5 md:flex-row-reverse"
+    >
+      <button>
+        <a
+          className="connect my-5 flex items-center justify-center gap-x-2 rounded-lg bg-secondary-500 px-4 py-2 transition-all hover:scale-105 hover:bg-secondary-600"
+          href="#contact"
+        >
+          <span>Let's connect</span>
+          <HiOutlineRocketLaunch className="size-6" />
+        </a>
+      </button>
+
       <div
-        className={`hamburger sm:hidden [&_span]:bg-secondary-500 ${isOpen ? "open [&_span]:!bg-red-600" : ""}`}
+        className={`hamburger md:hidden [&_span]:bg-secondary-500 ${isOpen ? "open [&_span]:!bg-red-600" : ""}`}
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <span></span>
@@ -37,9 +53,9 @@ function NavList() {
       </div>
 
       <ul
-        className={`w-28 gap-5 bg-base-500 tracking-wide transition-all sm:flex sm:w-auto sm:bg-transparent [&_li]:!mt-0 [&_li]:flex [&_li]:h-8 [&_li]:items-center [&_li]:rounded-lg ${isOpen ? "absolute right-1 top-10 w-32 space-y-2 rounded-lg border-[1px] border-base-300/95 p-1 sm:static sm:w-auto sm:space-y-0 sm:divide-y-0 sm:border-none sm:px-0 sm:py-0" : "hidden"}`}
+        className={`w-28 !space-y-2 bg-base-500 tracking-wide transition-all md:flex md:w-auto md:gap-x-5 md:!space-y-0 md:bg-transparent [&_li]:!mt-0 [&_li]:flex [&_li]:h-8 [&_li]:items-center [&_li]:rounded-lg ${isOpen ? "absolute right-1 top-20 w-32 rounded-lg border-[1px] border-base-300/95 p-1 py-[6px] md:static md:w-auto md:space-y-0 md:divide-y-0 md:border-none" : "hidden"}`}
       >
-        {["about", "techstack", "projects", "contact"].map((linkName) => (
+        {["about", "experience", "projects"].map((linkName) => (
           <Link
             key={linkName}
             name={linkName}

@@ -1,10 +1,10 @@
-import PageLink from "./PageLink";
+import SectionLink from "./SectionLink";
 
 function Projects() {
   return (
     <div id="projects" className="h-96 scroll-mt-32">
       <div>
-        <PageLink title="projects" />
+        <SectionLink title="projects" />
       </div>
     </div>
   );

@@ -1,15 +1,15 @@
 import About from "./About";
 import Contact from "./Contact";
+import Experience from "./Experience";
 import Intro from "./Intro";
 import Projects from "./Projects";
-import Techstack from "./Techstack";
 
 function Main() {
   return (
     <div>
       <Intro />
       <About />
-      <Techstack />
+      <Experience />
       <Projects />
       <Contact />
     </div>
