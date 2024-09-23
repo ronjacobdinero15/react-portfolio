@@ -1,6 +1,7 @@
 import About from "./About";
-import Contact from "./Contact";
+import Connect from "./Connect";
 import Experience from "./Experience";
+import Footer from "./Footer";
 import Intro from "./Intro";
 import Projects from "./Projects";
 
@@ -9,9 +10,10 @@ function Main() {
     <div>
       <Intro />
       <About />
-      <Experience />
       <Projects />
-      <Contact />
+      <Experience />
+      <Connect />
+      <Footer />
     </div>
   );
 }

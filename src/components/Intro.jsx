@@ -1,8 +1,10 @@
-import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
+import underline from "/underline.svg";
+
+import ConnectButton from "./ConnectButton.jsx";
 
 function Intro() {
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="-mt-5 flex h-screen items-center justify-center">
       <div className="flex flex-col gap-y-10 lg:flex-row-reverse xl:gap-x-10">
         <div className="flex min-w-72 justify-center">
           <img
@@ -26,6 +28,11 @@ function Intro() {
           <div className="gradient-highlight text-4xl font-bold text-transparent lg:text-5xl xl:text-start xl:text-6xl">
             Aspiring Full-stack developer
           </div>
+
+          <img src={underline} alt="underline art" />
+
+          <ConnectButton show={true} />
+
           <div className="max-w-2xl text-center text-sm leading-[22px] text-stone-300 sm:mx-10 lg:mx-0 lg:text-start lg:text-base xl:mx-0 xl:text-start">
             I am currently @ my 4th year in college and soon to graduate student
             from the Philippines. I am mostly self-taught developer focusing on
