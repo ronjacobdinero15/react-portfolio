@@ -24,117 +24,124 @@
   .gradient-highlight {
     @apply bg-gradient-to-t from-secondary-300 to-secondary-500 bg-clip-text;
   }
+}
 
-  /* RESUME ANIMATION */
-  .connectBtn {
-    z-index: 1;
-    position: relative;
-    font-size: inherit;
-    font-family: inherit;
-    color: white;
-    padding: 0.5em 1em;
-    outline: none;
-    border: none;
-    background-color: hsl(236, 32%, 26%);
-    overflow: hidden;
-    cursor: pointer;
-  }
+:root {
+  --primary-dark: #151418;
+  --primary-light: #2c2c2f;
+  --secondary-dark: #68dc0e;
+  --secondary-light: #acf773;
+}
 
-  .connectBtn::after {
-    content: "";
-    z-index: -1;
-    background-color: hsla(0, 0%, 100%, 0.2);
-    position: absolute;
-    top: -50%;
-    bottom: -50%;
-    width: 1.25em;
-    transform: translate3d(-525%, 0, 0) rotate(35deg);
-  }
+/* RESUME ANIMATION */
+.connectBtn {
+  z-index: 1;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-dark);
+  overflow: hidden;
+  cursor: pointer;
+}
 
-  .connectBtn:hover::after {
-    transition: transform 0.45s ease-in-out;
-    transform: translate3d(500%, 0, 0) rotate(35deg);
-  }
+.connectBtn::after {
+  content: "";
+  z-index: -1;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  width: 1.25em;
+  transform: translate3d(-525%, 0, 0) rotate(35deg);
+}
 
-  /* HAMBURGER MENU ANIMATION */
-  .hamburger {
-    cursor: pointer;
-    position: relative;
-    width: 30px;
-    height: 20px;
-  }
+.connectBtn:hover::after {
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(500%, 0, 0) rotate(35deg);
+}
 
-  .hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    border-radius: 50px;
-    position: absolute;
-    transition: all 0.3s ease;
-  }
+/* HAMBURGER MENU ANIMATION */
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
 
-  .hamburger span:nth-child(1) {
-    top: 0px;
-  }
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 50px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
 
-  .hamburger span:nth-child(2) {
-    top: 10px;
-  }
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
 
-  .hamburger span:nth-child(3) {
-    top: 20px;
-    right: 0;
-    width: 75%;
-  }
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
 
-  .hamburger.open span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 10px;
-  }
+.hamburger span:nth-child(3) {
+  top: 20px;
+  right: 0;
+  width: 75%;
+}
 
-  .hamburger.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
 
-  .hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 10px;
-    width: 100%;
-  }
+.hamburger.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
 
-  /* PROJECT PATTERN BACKGROUND */
-  .projectBg {
-    width: 100%;
-    height: 100%;
-    --color: rgba(114, 114, 114, 0.3);
-    background-color: #191a1a;
-    background-image: linear-gradient(
-        0deg,
-        transparent 24%,
-        var(--color) 25%,
-        var(--color) 26%,
-        transparent 27%,
-        transparent 74%,
-        var(--color) 75%,
-        var(--color) 76%,
-        transparent 77%,
-        transparent
-      ),
-      linear-gradient(
-        90deg,
-        transparent 24%,
-        var(--color) 25%,
-        var(--color) 26%,
-        transparent 27%,
-        transparent 74%,
-        var(--color) 75%,
-        var(--color) 76%,
-        transparent 77%,
-        transparent
-      );
-    background-size: 55px 55px;
-  }
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+  width: 100%;
+}
+
+/* PROJECT PATTERN BACKGROUND */
+.projectBg {
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: var(--primary-light);
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
 }
 
 html {

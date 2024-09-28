@@ -39,7 +39,7 @@ function NavList() {
       </div>
 
       <ul
-        className={`w-28 !space-y-2 bg-base-500 tracking-wide transition-all md:flex md:w-auto md:gap-x-5 md:!space-y-0 md:bg-transparent [&_li]:!mt-0 [&_li]:flex [&_li]:h-8 [&_li]:items-center [&_li]:rounded-lg ${isOpen ? "absolute right-1 top-10 w-32 rounded-lg border-[1px] border-base-300/95 p-1 py-[6px] md:static md:w-auto md:space-y-0 md:divide-y-0 md:border-none" : "hidden"}`}
+        className={`w-28 !space-y-2 bg-base-500 tracking-wide transition-all md:flex md:w-auto md:gap-x-5 md:!space-y-0 md:bg-transparent [&_li]:!mt-0 [&_li]:flex [&_li]:h-8 [&_li]:items-center [&_li]:rounded-lg ${isOpen ? "absolute right-1 top-10 w-32 rounded-lg border-[1px] border-base-300/95 p-1 py-[6px] md:w-auto md:space-y-0 md:divide-y-0 md:border-none" : "hidden md:!flex"}`}
       >
         {["about", "experience", "projects"].map((linkName) => (
           <Link

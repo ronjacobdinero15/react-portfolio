@@ -4,11 +4,11 @@ import ConnectButton from "./ConnectButton.jsx";
 
 function Intro() {
   return (
-    <div className="-mt-5 flex h-screen items-center justify-center">
+    <div className="-mt-5 flex h-dvh items-center justify-center">
       <div className="flex flex-col gap-y-10 lg:flex-row-reverse xl:gap-x-10">
-        <div className="flex min-w-72 justify-center">
+        <div className="hidden min-w-72 justify-center md:!flex">
           <img
-            className="object-s size-48 rounded-full object-cover object-bottom lg:size-56 xl:size-64"
+            className="size-48 rounded-full object-cover object-bottom lg:size-56 xl:size-64"
             src="./me.jpg"
             alt=""
           />

@@ -5,17 +5,17 @@ import Footer from "./Footer";
 import Intro from "./Intro";
 import Projects from "./Projects";
 
-function Main() {
+function AppLayout() {
   return (
-    <div>
+    <>
       <Intro />
       <About />
       <Projects />
       <Experience />
       <Connect />
       <Footer />
-    </div>
+    </>
   );
 }
 
-export default Main;
+export default AppLayout;
