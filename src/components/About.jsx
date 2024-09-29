@@ -92,15 +92,12 @@ const TECHNOLOGIES = [
 
 function About() {
   return (
-    <div
-      id="about"
-      className="flex h-dvh scroll-mt-32 sm:h-screen sm:items-center"
-    >
+    <div id="about" className="flex h-dvh w-full items-center">
       <div className="mx-auto max-w-6xl">
         <SectionLink title="about me" />
 
         <div className="grid gap-5 lg:grid-cols-2">
-          <div className="leading-[22px] text-stone-300 first-letter:float-left first-letter:mr-1 first-letter:rounded-sm first-letter:bg-secondary-500 first-letter:p-2 first-letter:text-xl first-letter:font-bold">
+          <p className="first-letter leading-6 first-letter:float-left first-letter:mr-1 first-letter:rounded-sm first-letter:bg-secondary-500 first-letter:p-2 first-letter:text-2xl first-letter:font-bold sm:leading-7">
             Hello, I'm Ron Jacob or RJ in short. I am a self-taught and
             self-motivated developer in React.JS and I usually spent and enjoy
             my time learning from online resources and create projects on my own
@@ -108,7 +105,7 @@ function About() {
             technologies: Redux Toolkit, TanStack/React Query, Supabase,
             ReactJS, React Router, Tailwind CSS, JavaScript, HTML & CSS, Git,
             GitHub, Bootstrap, Java and PostgreSQL.
-          </div>
+          </p>
 
           <div className="relative">
             <div className="mb-3 flex items-center gap-x-1">
@@ -116,14 +113,14 @@ function About() {
               <span className="text-xl font-semibold">Tech Stack</span>
             </div>
 
-            <div className="flex flex-wrap gap-x-2 gap-y-4 sm:max-w-96 md:max-w-md">
+            <div className="flex flex-wrap gap-x-2 gap-y-5 sm:max-w-96 md:max-w-md">
               {TECHNOLOGIES.map((tech) => (
                 <div key={tech.name} className="group">
-                  <span className="absolute bottom-16 right-0 top-8 -z-10 hidden sm:group-hover:!block md:top-4">
+                  <span className="absolute bottom-16 right-0 top-8 -z-10 hidden sm:group-hover:!block md:top-4 lg:top-10">
                     {tech.icon}
                   </span>
 
-                  <span className="z-10 text-nowrap rounded-full bg-base-400 px-4 py-1 text-center transition-colors sm:group-hover:bg-secondary-500">
+                  <span className="z-10 text-nowrap rounded-lg bg-base-400 px-4 py-2 text-center transition-colors sm:group-hover:bg-secondary-500 sm:group-hover:text-base-400">
                     {tech.name}
                   </span>
                 </div>

@@ -5,19 +5,19 @@
 @layer components {
   /* NAVLINK */
   .link {
-    @apply relative text-sm tracking-wide transition-colors duration-100 sm:uppercase sm:hover:text-secondary-500;
+    @apply relative tracking-wide transition-colors duration-100 md:uppercase md:hover:text-secondary-500;
   }
 
   .active {
-    @apply rounded-lg bg-secondary-500 text-base-500 sm:bg-transparent sm:text-secondary-500;
+    @apply rounded-lg bg-secondary-500 text-base-500 md:bg-transparent md:text-secondary-500;
   }
 
   .link::after {
-    @apply -bottom-2 left-2 h-[3px] w-0 rounded-full bg-secondary-500 duration-300 content-[''] sm:absolute;
+    @apply -bottom-2 left-2 duration-300 md:absolute md:h-[3px] md:w-0 md:rounded-full md:bg-secondary-500 md:content-[''];
   }
 
   .link.active::after {
-    @apply sm:w-[50%];
+    @apply md:w-[50%];
   }
 
   /* GRADIENT TEXT HIGHLIGHT */
@@ -68,7 +68,7 @@
 .hamburger {
   cursor: pointer;
   position: relative;
-  width: 30px;
+  width: 35px;
   height: 20px;
 }
 

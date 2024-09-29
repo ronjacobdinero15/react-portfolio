@@ -73,7 +73,7 @@ function Projects() {
     viewAllProjects === false ? PROJECTS.slice(0, 4) : PROJECTS;
 
   return (
-    <div id="projects" className="mb-32 scroll-mt-32">
+    <div id="projects" className="mb-32 flex w-full scroll-mt-32 items-center">
       <div className="mx-auto max-w-6xl">
         <SectionLink title="projects" even={true} className="mb-3" />
 

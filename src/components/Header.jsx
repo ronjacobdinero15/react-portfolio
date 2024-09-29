@@ -7,7 +7,7 @@ function Header() {
       <div className="mx-auto flex h-[72px] max-w-[90%] items-center justify-between sm:max-w-[80%]">
         <a href="#" className="transition ease-out">
           <img
-            className="size-8"
+            className="size-10"
             src={logo}
             alt="ron jacob dinero portfolio logo"
           />

@@ -27,7 +27,7 @@ const EXPERIENCE = [
 
 function Experience() {
   return (
-    <div id="experience" className="h-dvh scroll-mt-32">
+    <div id="experience" className="w-full scroll-mt-32">
       <div className="mx-auto max-w-6xl">
         <SectionLink title="experience" />
 

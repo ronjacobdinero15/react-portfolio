@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div id="footer" className="scroll-mt-32">
+    <div id="footer" className="">
       <div className="mx-auto max-w-6xl"></div>
     </div>
   );

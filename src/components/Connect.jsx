@@ -3,10 +3,10 @@ import SectionLink from "./SectionLink";
 
 function Connect() {
   return (
-    <div id="connect" className="h-dvh scroll-mt-32">
+    <div id="connect" className="flex h-dvh w-full scroll-mt-32 items-center">
       <div className="mx-auto max-w-6xl">
         <div className="">
-          <div className="text-center text-lg font-semibold text-secondary-500">
+          <div className="text-center text-xl font-semibold text-secondary-500">
             Hit me up
           </div>
 

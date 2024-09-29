@@ -17,23 +17,30 @@ function Project({ project, toggleOpenStyle }) {
         </div>
       </a>
 
-      <div className="my-3 space-y-3">
-        <div className="flex h-10 items-center justify-end gap-3">
+      <div className="mt-3 flex h-10 items-center justify-between gap-3">
+        <span className="line-clamp-1 leading-6 sm:leading-7">
+          {project.description}
+        </span>
+
+        <div className="flex items-center gap-3">
           <a href={project.repoLink} target="_blank">
-            <FaGithubAlt className="size-7 scale-105 fill-secondary-500 transition-all hover:scale-105 hover:fill-secondary-600" />
+            <FaGithubAlt className="size-7 fill-stone-100 transition-colors hover:fill-secondary-500" />
           </a>
-          {project.liveLink && (
+
+          {project.liveLink ? (
             <a
               href={project.liveLink}
-              className="bg-base-400 px-2 py-1 transition-all hover:scale-105"
+              className="rounded-lg bg-base-400 px-4 py-2 transition-colors hover:bg-secondary-500"
               target="_blank"
             >
               LIVE
             </a>
+          ) : (
+            <span className="py- rounded-lg bg-red-500 px-4 py-2 transition-colors hover:bg-red-600">
+              N/A
+            </span>
           )}
         </div>
-
-        <div className="line-clamp-2 text-sm">{project.description}</div>
       </div>
     </div>
   );

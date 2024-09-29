@@ -20,10 +20,10 @@ function Work({ exp }) {
           />
         </a>
         <div className="flex">
-          <div className="">
-            <h1 className="text-xl font-semibold text-secondary-500">
+          <div className="space-y-[6px]">
+            <p className="text-xl font-semibold text-secondary-500">
               {exp.jobTitle}
-            </h1>
+            </p>
             <p>
               {exp.companyName} · {exp.employmentType}
             </p>
@@ -31,7 +31,7 @@ function Work({ exp }) {
               {exp.dateWorked} · {exp.workedLength}
             </p>
             <p
-              className={`${showDescription ? "" : "line-clamp-3 md:line-clamp-none"} cursor-pointer text-sm`}
+              className={`${showDescription ? "" : "line-clamp-3 md:line-clamp-none"} cursor-pointer leading-6`}
               onClick={() => setShowDescription((show) => !show)}
             >
               {exp.description}
