@@ -4,6 +4,8 @@ import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
 
 import Project from "./Project";
 import SectionLink from "./SectionLink";
+import Section from "./Section";
+import Reveal from "./Reveal";
 
 const PROJECTS = [
   {
@@ -73,31 +75,31 @@ function Projects() {
     viewAllProjects === false ? PROJECTS.slice(0, 4) : PROJECTS;
 
   return (
-    <div id="projects" className="mb-32 flex w-full scroll-mt-32 items-center">
-      <div className="mx-auto max-w-6xl">
-        <SectionLink title="projects" even={true} className="mb-3" />
+    <Section sectionId="projects" type="projects">
+      <SectionLink title="projects" even={true} className="mb-3" />
 
-        <div className="grid gap-y-10 lg:grid-cols-2 lg:gap-x-10">
-          {displayProjects.map((project, index) => (
-            <Project
-              key={index}
-              project={project}
-              toggleOpenStyle={`${index >= 2 && viewAllProjects === false ? "hidden md:!block" : ""}`}
-            />
-          ))}
-        </div>
-        <div className="my-10 flex justify-center">
+      <div className="grid gap-y-10 lg:grid-cols-2 lg:gap-x-10">
+        {displayProjects.map((project, index) => (
+          <Project
+            key={index}
+            project={project}
+            toggleOpenStyle={`${index >= 1 && viewAllProjects === false ? "hidden md:!block" : ""}`}
+          />
+        ))}
+      </div>
+      <div className="my-10 flex justify-center">
+        <Reveal>
           <button
-            className={`${viewAllProjects ? "border-b-secondary-500 after:border-t-secondary-500 hover:!border-b-base-400 hover:after:!border-t-base-400" : ""} relative border-b-[20px] border-l-[50px] border-r-[50px] border-base-400 border-l-transparent border-r-transparent transition-all duration-200 after:absolute after:left-[-50px] after:top-[19px] after:border-l-[50px] after:border-r-[50px] after:border-t-[70px] after:border-base-400 after:border-l-transparent after:border-r-transparent after:transition-all after:duration-200 after:content-[''] hover:border-b-secondary-500 hover:after:border-t-secondary-500`}
+            className={`${viewAllProjects ? "border-b-secondary-500 after:border-t-secondary-500 hover:!border-b-base-400 hover:after:!border-t-base-400" : ""} relative mb-20 border-b-[20px] border-l-[50px] border-r-[50px] border-base-400 border-l-transparent border-r-transparent transition-all duration-200 after:absolute after:left-[-50px] after:top-[19px] after:border-l-[50px] after:border-r-[50px] after:border-t-[70px] after:border-base-400 after:border-l-transparent after:border-r-transparent after:transition-all after:duration-200 after:content-[''] hover:border-b-secondary-500 hover:after:border-t-secondary-500`}
             onClick={() => setViewAllProjects((toggle) => !toggle)}
           >
             <span className="absolute -left-6 top-5 z-20 text-5xl">
               {viewAllProjects ? <HiChevronUp /> : <HiChevronDown />}
             </span>
           </button>
-        </div>
+        </Reveal>
       </div>
-    </div>
+    </Section>
   );
 }
 

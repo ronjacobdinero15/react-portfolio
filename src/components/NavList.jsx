@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import Link from "./Link";
-import ConnectButton from "./ConnectButton";
+import NavLink from "./NavLink";
 
 function NavList() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +41,7 @@ function NavList() {
         className={`w-36 !space-y-2 bg-base-500 transition-all md:flex md:w-auto md:gap-x-5 md:!space-y-0 md:bg-transparent [&_li]:!mt-0 [&_li]:flex [&_li]:h-8 [&_li]:items-center [&_li]:rounded-lg ${isOpen ? "absolute right-1 top-10 w-32 rounded-lg border-[1px] border-base-300/95 p-1 py-2 md:w-auto md:space-y-0 md:divide-y-0 md:border-none" : "hidden md:!flex"}`}
       >
         {["about", "experience", "projects"].map((linkName) => (
-          <Link
+          <NavLink
             key={linkName}
             name={linkName}
             isActive={linkName === active}
@@ -50,8 +49,6 @@ function NavList() {
           />
         ))}
       </ul>
-
-      <ConnectButton />
     </nav>
   );
 }

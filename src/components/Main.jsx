@@ -1,18 +1,18 @@
 import About from "./About";
-import Connect from "./Connect";
+import Contact from "./Contact";
 import Experience from "./Experience";
 import Footer from "./Footer";
-import Intro from "./Intro";
+import Hero from "./Hero";
 import Projects from "./Projects";
 
 function AppLayout() {
   return (
     <>
-      <Intro />
+      <Hero />
       <About />
       <Projects />
       <Experience />
-      <Connect />
+      <Contact />
       <Footer />
     </>
   );

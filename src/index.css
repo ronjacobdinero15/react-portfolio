@@ -4,7 +4,7 @@
 
 @layer components {
   /* NAVLINK */
-  .link {
+  .navLink {
     @apply relative tracking-wide transition-colors duration-100 md:uppercase md:hover:text-secondary-500;
   }
 
@@ -12,11 +12,11 @@
     @apply rounded-lg bg-secondary-500 text-base-500 md:bg-transparent md:text-secondary-500;
   }
 
-  .link::after {
+  .navLink::after {
     @apply -bottom-2 left-2 duration-300 md:absolute md:h-[3px] md:w-0 md:rounded-full md:bg-secondary-500 md:content-[''];
   }
 
-  .link.active::after {
+  .navLink.active::after {
     @apply md:w-[50%];
   }
 
@@ -34,7 +34,7 @@
 }
 
 /* RESUME ANIMATION */
-.connectBtn {
+.contactBtn {
   z-index: 1;
   position: relative;
   font-size: inherit;
@@ -48,7 +48,7 @@
   cursor: pointer;
 }
 
-.connectBtn::after {
+.contactBtn::after {
   content: "";
   z-index: -1;
   background-color: hsla(0, 0%, 100%, 0.2);
@@ -59,9 +59,9 @@
   transform: translate3d(-525%, 0, 0) rotate(35deg);
 }
 
-.connectBtn:hover::after {
+.contactBtn:hover::after {
   transition: transform 0.45s ease-in-out;
-  transform: translate3d(500%, 0, 0) rotate(35deg);
+  transform: translate3d(560%, 0, 0) rotate(35deg);
 }
 
 /* HAMBURGER MENU ANIMATION */

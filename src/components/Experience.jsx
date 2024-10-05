@@ -2,6 +2,7 @@ import rocLogo from "/experience/roc.jfif";
 
 import Work from "./Work";
 import SectionLink from "./SectionLink";
+import Section from "./Section";
 
 const EXPERIENCE = [
   {
@@ -27,17 +28,15 @@ const EXPERIENCE = [
 
 function Experience() {
   return (
-    <div id="experience" className="w-full scroll-mt-32">
-      <div className="mx-auto max-w-6xl">
-        <SectionLink title="experience" />
+    <Section sectionId="experience" type="experience">
+      <SectionLink title="experience" />
 
-        <div className="space-y-5 divide-y">
-          {EXPERIENCE.map((exp, i) => (
-            <Work exp={exp} key={i} />
-          ))}
-        </div>
+      <div className="space-y-5 divide-y">
+        {EXPERIENCE.map((exp, i) => (
+          <Work exp={exp} key={i} />
+        ))}
       </div>
-    </div>
+    </Section>
   );
 }
 
