@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import AppLayout from "./components/Main";
+import AppLayout from "./components/AppLayout";
 
 function App() {
   return (

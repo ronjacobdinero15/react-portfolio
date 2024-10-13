@@ -8,7 +8,7 @@ function NavLink({ name, isActive, onClick }) {
         href={`#${name}`}
         onClick={onClick}
       >
-        {name}
+        {name.charAt(0).toUpperCase() + name.slice(1)}
       </a>
     </li>
   );
