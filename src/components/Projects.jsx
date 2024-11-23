@@ -2,10 +2,11 @@ import { useState } from "react";
 
 import { HiChevronDown, HiChevronUp } from "react-icons/hi2";
 
-import Project from "./Project";
-import SectionLink from "./SectionLink";
-import Section from "./Section";
 import Reveal from "./Reveal";
+import Button from "./Button";
+import Project from "./Project";
+import Section from "./Section";
+import SectionLink from "./SectionLink";
 
 const PROJECTS = [
   {
@@ -87,18 +88,21 @@ function Projects() {
           />
         ))}
       </div>
-      <div className="my-10 flex justify-center">
+
+      <Button
+        type="projectToggle"
+        onClick={() => setViewAllProjects((toggle) => !toggle)}
+      >
         <Reveal>
-          <button
+          <div
             className={`${viewAllProjects ? "border-b-secondary-500 after:border-t-secondary-500 hover:!border-b-base-400 hover:after:!border-t-base-400" : ""} relative mb-20 border-b-[20px] border-l-[50px] border-r-[50px] border-base-400 border-l-transparent border-r-transparent transition-all duration-200 after:absolute after:left-[-50px] after:top-[19px] after:border-l-[50px] after:border-r-[50px] after:border-t-[70px] after:border-base-400 after:border-l-transparent after:border-r-transparent after:transition-all after:duration-200 after:content-[''] hover:border-b-secondary-500 hover:after:border-t-secondary-500`}
-            onClick={() => setViewAllProjects((toggle) => !toggle)}
           >
             <span className="absolute -left-6 top-5 z-20 text-5xl">
               {viewAllProjects ? <HiChevronUp /> : <HiChevronDown />}
             </span>
-          </button>
+          </div>
         </Reveal>
-      </div>
+      </Button>
     </Section>
   );
 }

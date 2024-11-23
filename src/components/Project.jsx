@@ -1,10 +1,11 @@
 import { FaGithubAlt } from "react-icons/fa";
+
 import Button from "./Button";
 import Reveal from "./Reveal";
 
 function Project({ project, toggleOpenStyle }) {
   return (
-    <div className={`${toggleOpenStyle} `}>
+    <div className={`${toggleOpenStyle}`}>
       <Reveal width="w-full">
         <a href={project.repoLink} target="_blank" className="group">
           <div className="relative flex aspect-[16/9] justify-center overflow-hidden group-hover:cursor-pointer">
@@ -22,22 +23,22 @@ function Project({ project, toggleOpenStyle }) {
       </Reveal>
 
       <Reveal width="w-full">
-        <div className="mt-3 flex h-10 items-center justify-between gap-2">
+        <div className="mt-3 flex h-12 items-center justify-between gap-2">
           <span className="line-clamp-1 leading-6 sm:leading-7">
             {project.description}
           </span>
           <div className="flex items-center gap-3">
-            <a href={project.repoLink} target="_blank">
+            <a
+              href={project.repoLink}
+              target="_blank"
+              className="focus:outline-none [&_svg]:focus:fill-secondary-500"
+            >
               <FaGithubAlt className="size-7 fill-stone-100 transition-colors hover:fill-secondary-500" />
             </a>
             {project.liveLink ? (
-              <Button role="link" href={project.liveLink}>
-                LIVE
-              </Button>
+              <Button href={project.liveLink}>LIVE</Button>
             ) : (
-              <span className="rounded-lg bg-red-500 px-4 py-2 transition-colors hover:bg-red-600">
-                N/A
-              </span>
+              <Button type="na">N/A</Button>
             )}
           </div>
         </div>

@@ -22,7 +22,7 @@ function Contact() {
         <Reveal>
           <a
             href="mailto:ronjacobdinero15@gmail.com"
-            className="group flex items-center justify-center gap-1 sm:gap-2 sm:text-xl"
+            className="outlineStyle group flex items-center justify-center gap-1 focus:px-3 sm:gap-2 sm:text-xl"
           >
             <HiEnvelope className="size-7 transition-colors group-hover:fill-secondary-500 sm:size-10" />
             <span className="shadow-md transition-colors group-hover:text-secondary-500">

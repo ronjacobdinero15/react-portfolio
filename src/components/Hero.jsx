@@ -1,8 +1,9 @@
 import underline from "/underline.svg";
+import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
-import ContactButton from "./ContactButton.jsx";
-import Section from "./Section.jsx";
 import Reveal from "./Reveal.jsx";
+import Button from "./Button.jsx";
+import Section from "./Section.jsx";
 
 function Hero() {
   return (
@@ -18,7 +19,7 @@ function Hero() {
           </Reveal>
         </div>
 
-        <div className="flex max-w-3xl flex-col gap-y-1 tracking-wide md:items-center lg:items-start lg:text-start">
+        <div className="flex flex-col gap-y-1 tracking-wide md:items-center lg:items-start lg:text-start">
           <Reveal>
             <p className="gradient-highlight xl:text-md font-semibold text-transparent">
               Hello World! I Am
@@ -59,7 +60,10 @@ function Hero() {
 
           <div>
             <Reveal>
-              <ContactButton show={true} />
+              <Button type="contact" href="contact">
+                <span className="text-md">Let's connect</span>
+                <HiOutlineRocketLaunch className="size-6" />
+              </Button>
             </Reveal>
           </div>
         </div>

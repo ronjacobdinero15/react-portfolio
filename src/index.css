@@ -20,6 +20,11 @@
     @apply md:w-[50%];
   }
 
+  /* OUTLINE */
+  .outlineStyle {
+    @apply focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-500;
+  }
+
   /* GRADIENT TEXT HIGHLIGHT */
   .gradient-highlight {
     @apply bg-gradient-to-t from-secondary-300 to-secondary-500 bg-clip-text;
@@ -35,17 +40,8 @@
 
 /* RESUME ANIMATION */
 .contactBtn {
-  z-index: 1;
   position: relative;
-  font-size: inherit;
-  font-family: inherit;
-  color: white;
-  padding: 0.5em 1em;
-  outline: none;
-  border: none;
-  background-color: var(--secondary-dark);
   overflow: hidden;
-  cursor: pointer;
 }
 
 .contactBtn::after {
@@ -93,6 +89,7 @@
   top: 20px;
   right: 0;
   width: 75%;
+  height: 3.5px !important;
 }
 
 .hamburger.open span:nth-child(1) {

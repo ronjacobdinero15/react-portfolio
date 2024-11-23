@@ -1,8 +1,8 @@
 import rocLogo from "/experience/roc.jfif";
 
 import Work from "./Work";
-import SectionLink from "./SectionLink";
 import Section from "./Section";
+import SectionLink from "./SectionLink";
 
 const EXPERIENCE = [
   {

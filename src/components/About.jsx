@@ -122,7 +122,7 @@ function About() {
           </Reveal>
 
           <Reveal width="w-full">
-            <div className="flex flex-wrap gap-x-2 gap-y-5 py-2 sm:max-w-96 md:max-w-md">
+            <div className="flex flex-wrap gap-2 py-2 sm:max-w-96 md:max-w-md">
               {TECHNOLOGIES.map((tech) => (
                 <div key={tech.name} className="group">
                   <span className="absolute bottom-16 right-0 top-4 -z-10 hidden sm:group-hover:!block md:top-0">

@@ -13,7 +13,7 @@ function Work({ exp }) {
           <a
             href="https://www.linkedin.com/company/roc-ph/posts/?feedView=all"
             target="_blank"
-            className="hidden sm:!inline"
+            className="hidden focus:outline-none sm:!inline"
           >
             <img
               src={exp.companyLogo}
@@ -58,7 +58,7 @@ function Work({ exp }) {
       <div className="mt-2 grid sm:grid-cols-[100px_1fr]">
         <div className=""></div>
         <Reveal>
-          <div className="flex flex-wrap gap-x-2 gap-y-2 sm:ml-5">
+          <div className="flex flex-wrap gap-2 sm:ml-5">
             {exp.skillsUsed.map((skill) => (
               <Button key={skill}>{skill}</Button>
             ))}

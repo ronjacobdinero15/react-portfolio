@@ -1,4 +1,5 @@
 import { HiLink } from "react-icons/hi2";
+
 import Reveal from "./Reveal";
 
 function SectionLink({ title, even = false }) {
@@ -14,7 +15,7 @@ function SectionLink({ title, even = false }) {
 
       {firstWord !== "contact" && (
         <>
-          <a className="relative" href={`#${firstWord}`}>
+          <a className="relative outline-none" href={`#${firstWord}`}>
             <HiLink className="size-5 cursor-pointer text-base-300 transition-colors hover:text-secondary-500 group-hover:visible sm:invisible" />
           </a>
           <div className="h-[1px] w-full rounded-full bg-secondary-500"></div>
